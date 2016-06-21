@@ -21,8 +21,16 @@ namespace COMP123_S2016_Lesson7
                  int dice = firstDie + secondDie;
                  diceRolls.Add(dice);
             }
+            
+            // sort method 
+            diceRolls.Sort();
 
-
+            // displays the list 
+            foreach (int result in diceRolls) // replace the collection to the list 
+            {
+                Console.Write(result + " ");
+            }
+            Console.WriteLine();
            
             
         }
