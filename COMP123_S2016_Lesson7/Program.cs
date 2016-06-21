@@ -12,13 +12,15 @@ namespace COMP123_S2016_Lesson7
         {
             Random random = new Random(); // pseudo number object 
             List<int> diceRolls = new List<int>();
-            int maxRolls = 50;
+            int[] tally = new int[13];
+            int maxRolls = 50000;
 
             for (int i = 0; i < maxRolls; i++)
             {
                  int firstDie = random.Next(1, 7);
                  int secondDie = random.Next(1, 7);
                  int dice = firstDie + secondDie;
+                 tally[dice]++;
                  diceRolls.Add(dice);
             }
             
@@ -31,7 +33,11 @@ namespace COMP123_S2016_Lesson7
                 Console.Write(result + " ");
             }
             Console.WriteLine();
-           
+
+            for (int i = 2; i < 13; i++)
+            {
+                Console.WriteLine("{0}: {1} ", i, tally[i]);
+            }
             
         }
     }
