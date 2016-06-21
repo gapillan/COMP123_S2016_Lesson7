@@ -13,7 +13,7 @@ namespace COMP123_S2016_Lesson7
             Random random = new Random(); // pseudo number object 
             List<int> diceRolls = new List<int>();
             int[] tally = new int[13];
-            int maxRolls = 50000;
+            int maxRolls = 5000000;
 
             for (int i = 0; i < maxRolls; i++)
             {
@@ -27,12 +27,13 @@ namespace COMP123_S2016_Lesson7
             // sort method 
             diceRolls.Sort();
 
+            /** 
             // displays the list 
             foreach (int result in diceRolls) // replace the collection to the list 
             {
                 Console.Write(result + " ");
             }
-            Console.WriteLine();
+            Console.WriteLine(); */
 
             for (int i = 2; i < 13; i++)
             {
